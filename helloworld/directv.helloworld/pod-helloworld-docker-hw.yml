@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: helloworld-docker-hw
+  labels:
+    app: helloworld-docker-hw
+spec:
+  containers:
+  - name: k8s-demo
+    image: localhost:5000/directv
+    ports:
+    - containerPort: 3000

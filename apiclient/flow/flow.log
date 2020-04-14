@@ -1,0 +1,41 @@
+
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"msg: { response: [ServerResponse], payload: '12345' }"}
+{"service":"user-service","level":"info","message":"CustomerId: 12345"}
+{"message":"Error: getaddrinfo ENOTFOUND apimocks","level":"error","service":"user-service"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"msg: { response: [ServerResponse], payload: '12345' }"}
+{"service":"user-service","level":"info","message":"CustomerId: 12345"}
+{"message":"Error: getaddrinfo ENOTFOUND apimocks","level":"error","service":"user-service"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"msg: { response: [ServerResponse], payload: '12345' }"}
+{"service":"user-service","level":"info","message":"CustomerId: 12345"}
+{"message":"Error: getaddrinfo EAI_AGAIN apimocks","level":"error","service":"user-service"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"msg: { response: [ServerResponse], payload: '12345' }"}
+{"service":"user-service","level":"info","message":"CustomerId: 12345"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"msg: { response: [ServerResponse], payload: '12345' }"}
+{"service":"user-service","level":"info","message":"CustomerId: 12345"}
+{"message":{"response":"ok"},"level":"info","service":"user-service"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"This app is listening at http://:::3010"}
+{"service":"user-service","level":"info","message":"msg: { response: [ServerResponse], payload: '12345' }"}
+{"service":"user-service","level":"info","message":"CustomerId: 12345"}
+{"message":{"response":"ok"},"level":"info","service":"user-service"}
+{"service":"user-service","level":"info","message":"msg: { response: [ServerResponse], payload: '12345' }"}
+{"service":"user-service","level":"info","message":"CustomerId: 12345"}
+{"message":{"response":"ok"},"level":"info","service":"user-service"}

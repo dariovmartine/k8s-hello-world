@@ -1,0 +1,49 @@
+version: "3"
+
+services:
+  apimocks:
+    image: node:12
+    container_name: apimocks
+    working_dir: /app
+    volumes:
+      - ./apimocks:/app
+    ports:
+      - 33000:3000
+    networks:
+      - back-tier
+    environment:
+      - PORT=3000
+    command: sh -c "npm install && npm run dev"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "3"
+  flow:
+    image: node:12
+    container_name: flow
+    depends_on:
+      - "apimocks"
+    working_dir: /app
+    volumes:
+      - ./flow:/app
+    expose:
+      - "33010"
+    networks:
+      - front-tier
+      - back-tier            
+    ports:
+      - 33010:3010
+    environment:
+      - PORT=3010
+    command: sh -c "npm install && npm run dev"    
+    depends_on:
+      - "apimocks"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "100k"
+        max-file: "3"
+networks:
+  front-tier:
+  back-tier:
