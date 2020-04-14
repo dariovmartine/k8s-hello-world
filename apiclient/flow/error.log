@@ -1,4 +1,0 @@
-
-{"message":"Error: getaddrinfo ENOTFOUND apimocks","level":"error","service":"user-service"}
-{"message":"Error: getaddrinfo ENOTFOUND apimocks","level":"error","service":"user-service"}
-{"message":"Error: getaddrinfo EAI_AGAIN apimocks","level":"error","service":"user-service"}

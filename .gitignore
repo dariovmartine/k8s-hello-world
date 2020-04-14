@@ -1,6 +1,6 @@
 apiclient/flow/node_modules
 apiclient/flow/package-lock.json
-apiclient/flow/logs
+#apiclient/flow/logs
 apiclient/apimocks/node_modules
 apiclient/apimocks/package-lock.json
-apiclient/apimocks/logs
+#apiclient/apimocks/logs
