@@ -7,9 +7,11 @@
 Para levantar las dos apps con nodemon:
 
 Iniciar:
+    
     docker-compose up -d
     
 Reiniciar:    
+    
     docker-compose down && docker-compose up -d
 
 ### Apimocks

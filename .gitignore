@@ -1,2 +1,4 @@
 apiclient/flow/node_modules
 apiclient/apimocks/node_modules
+apiclient/flow/package-lock.json
+apiclient/apimocks/package-lock.json
