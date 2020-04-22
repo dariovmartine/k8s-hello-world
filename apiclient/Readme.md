@@ -72,7 +72,7 @@ Valido que el servicio queda expuesto
 
 Ejecutar:
 
-    curl localhost:<port>  
+    curl -X POST -H "Content-type: application/json" localhost:<port>/flow -d '{ "customerId" : "12345" }'
 
 donde port es el indicado por la property NodePort indicada por el comando describe
 
