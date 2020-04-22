@@ -7,8 +7,8 @@ metadata:
 spec:
   containers:
   - name: apimocks
-    image: localhost:3000
+    image: localhost:5000/apimocks:1.0
   - name: flow
-    image: localhost:3100
+    image: localhost:5000/flow:1.0
     ports:
     - containerPort: 3100

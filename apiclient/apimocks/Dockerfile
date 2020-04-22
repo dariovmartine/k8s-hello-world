@@ -14,6 +14,4 @@ WORKDIR /app
 COPY --from=base /app .
 COPY . .
 
-EXPOSE 3000
-
 CMD npm start
