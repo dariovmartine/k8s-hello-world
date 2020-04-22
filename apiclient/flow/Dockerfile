@@ -13,4 +13,7 @@ FROM node:12-alpine
 WORKDIR /app
 COPY --from=base /app .
 COPY . .
+
+EXPOSE 3010
+
 CMD npm start

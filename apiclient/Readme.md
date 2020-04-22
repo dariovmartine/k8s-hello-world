@@ -62,4 +62,16 @@ Crear los pods:
 
     microk8s.kubectl create -f pod-apiclient-hw.yml
 
+Exponer el servicio
     
+    microk8s.kubectl expose pod apiclient-hw --type=NodePort --name apiclient-hw-service
+
+Valido que el servicio queda expuesto
+    
+    microk8s.kubectl describe service apiclient-hw-service
+
+Ejecutar:
+
+    curl localhost:<port>  
+
+donde port es el indicado por la property NodePort indicada por el comando describe

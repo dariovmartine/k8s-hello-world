@@ -11,4 +11,4 @@ spec:
   - name: flow
     image: localhost:5000/flow:1.0
     ports:
-    - containerPort: 3100
+    - containerPort: 3010

@@ -4,3 +4,7 @@ apiclient/flow/logs
 apiclient/apimocks/node_modules
 apiclient/apimocks/package-lock.json
 apiclient/apimocks/logs
+apiclient/flow/flow.log
+apiclient/flow/error.log
+apiclient/apimocks/apimocks.log
+apiclient/apimocks/error.log
