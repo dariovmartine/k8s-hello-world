@@ -10,5 +10,10 @@ spec:
     image: localhost:5000/apimocks:1.0
   - name: flow
     image: localhost:5000/flow:1.0
+    env:
+      - name: API_HOST
+        value: localhost
+      - name: API_PORT
+        value: "3000"
     ports:
     - containerPort: 3010

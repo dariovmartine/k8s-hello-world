@@ -21,6 +21,8 @@ const logger = winston.createLogger({
 });
 
 const app_port = process.env.PORT || 3010;
+const api_host = process.env.API_HOST || 'apimocks';
+const api_port = process.env.API_PORT || 3000;
 
 var express = require('express');
 var app = express();
@@ -52,11 +54,15 @@ ee.on('call_web_service_1', function (msg) {
   
     logger.info('msg: %s', msg)
     logger.info('CustomerId: %s', msg.payload)
+    
+    var api_uri = 'http://' + api_host + ':' + api_port + '/api/users/1';
+    logger.info('Calling: %s', api_uri)
+    
     var response = msg.response;
 
     var options = {
         method: 'POST',
-        uri: 'http://apimocks:3000/api/users/1',
+        uri: api_uri,
         body: {
             some: 'value'
         },

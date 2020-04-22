@@ -24,7 +24,7 @@ Reiniciar:
     
     docker build --network host -t apimocks:1.0 ./apimocks
     docker build --network host -t flow:1.0 ./flow
-    docker image prune
+    docker image prune -f
 
 #### Probar las apps
 
@@ -75,3 +75,14 @@ Ejecutar:
     curl localhost:<port>  
 
 donde port es el indicado por la property NodePort indicada por el comando describe
+
+### Extras
+
+Listar pods y servicios:
+    
+    microk8s kubectl get all
+
+Eliminar pod y servicios:    
+
+    microk8s.kubectl delete pods apiclient-hw
+    microk8s.kubectl delete service/apiclient-hw-service
