@@ -1,0 +1,1 @@
+curl -X POST localhost:3000/api/users/1 

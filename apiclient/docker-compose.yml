@@ -8,7 +8,7 @@ services:
     volumes:
       - ./apimocks:/app
     ports:
-      - 33000:3000
+      - 3000:3000
     networks:
       - back-tier
     environment:
@@ -36,6 +36,7 @@ services:
       - 33010:3010
     environment:
       - PORT=3010
+      - API_HOST=apimocks
     command: sh -c "npm install && npm run dev"    
     depends_on:
       - "apimocks"

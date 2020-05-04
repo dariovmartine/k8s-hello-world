@@ -1,15 +1,16 @@
 const winston = require('winston');
 const { format } = require('logform');
 
-const { combine } = format;
+const { combine, timestamp } = format;
 
 const logger = winston.createLogger({
   level: 'info',
   format:  combine(
+    timestamp(),    
     winston.format.splat(),
-    winston.format.json()
+    winston.format.json()     
   ),
-  defaultMeta: { service: 'user-service' },
+  defaultMeta: { service: 'flow' },
   transports: [
     //
     // - Write to all logs with level `info` and below to `flow.log` 
@@ -21,13 +22,13 @@ const logger = winston.createLogger({
 });
 
 const app_port = process.env.PORT || 3010;
-const api_host = process.env.API_HOST || 'apimocks';
+const api_host = process.env.API_HOST || 'localhost';
 const api_port = process.env.API_PORT || 3000;
 
 var express = require('express');
 var app = express();
 
-var rp = require('request-promise');
+const axios = require('axios');
 
 var EventEmitter = require('events')
 var ee = new EventEmitter()
@@ -60,21 +61,22 @@ ee.on('call_web_service_1', function (msg) {
     
     var response = msg.response;
 
-    var options = {
+    axios({
         method: 'POST',
-        uri: api_uri,
-        body: {
+        url: api_uri,
+        data: {
             some: 'value'
         },
-        json: true // Automatically stringifies the body to JSON
-    };
- 
-    rp(options)
-        .then(function (parsedBody) {
-            response.send("Result: OK!");
-            logger.info(parsedBody)
-    })
-    .catch(function (err) {
+        timeout: 5000,
+        headers: {
+            "Content-Type": "application/json"
+        }
+    }).then(async callres=> {
+    
+        response.send("Result: OK!")
+        logger.info(callres.data)
+    }).catch(async err=> {
+    
         var error_message = "Error: unexpected";
         if (err.message) {
             error_message = err.message
